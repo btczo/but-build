@@ -39,7 +39,7 @@ var rename = require('gulp-rename');
 var runsequence = require('run-sequence');
 runsequence.use(gulp);
 var shell = require('gulp-shell');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
 var bump = require('gulp-bump');
 var git = require('gulp-git');
 var fs = require('fs');
