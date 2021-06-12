@@ -1,17 +1,17 @@
 {
-  "name": "digibyte-build",
+  "name": "but-build",
   "version": "0.8.0",
-  "description": "A helper for common tasks to build digibyte modules'",
+  "description": "A helper for common tasks to build but modules'",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/digibyte/digibyte-build"
+    "url": "git://github.com/btczo/but-build"
   },
   "keywords": [
-    "digibyte"
+    "but"
   ],
   "contributors": [
     {
@@ -37,9 +37,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/digibyte/digibyte-build/issues"
+    "url": "https://github.com/btczo/but-build/issues"
   },
-  "homepage": "https://github.com/digibyte/digibyte-build",
+  "homepage": "https://github.com/btczo/but-build",
   "dependencies": {
     "brfs": "^1.4.3",
     "browserify": "^13.1.1",

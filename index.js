@@ -54,12 +54,12 @@ function startGulp(name, opts) {
 
   opts = opts || {};
   var browser = !opts.skipBrowser;
-  var fullname = name ? 'digibyte-' + name : 'digibyte';
+  var fullname = name ? 'but-' + name : 'but';
   var files = ['lib/**/*.js'];
   var tests = ['test/**/*.js'];
   var alljs = files.concat(tests);
 
-  var buildPath = './node_modules/digibyte-build/';
+  var buildPath = './node_modules/but-build/';
   var buildModulesPath = buildPath + 'node_modules/';
   var buildBinPath = buildPath + 'node_modules/.bin/';
 
@@ -129,9 +129,9 @@ function startGulp(name, opts) {
     var browserifyCommand;
 
     if (name !== 'lib') {
-      browserifyCommand = browserifyPath + ' --require ./index.js:' + fullname + ' --external digibyte -o ' + fullname + '.js';
+      browserifyCommand = browserifyPath + ' --require ./index.js:' + fullname + ' --external but -o ' + fullname + '.js';
     } else {
-      browserifyCommand = browserifyPath + ' --require ./index.js:digibyte -o digibyte.js';
+      browserifyCommand = browserifyPath + ' --require ./index.js:but -o but.js';
     }
 
     gulp.task('browser:uncompressed', shell.task([
@@ -320,7 +320,7 @@ function startGulp(name, opts) {
   });
 
   gulp.task('release:push', function(cb) {
-    git.push('digibyte', 'master', {
+    git.push('but', 'master', {
       args: ''
     }, cb);
   });
@@ -329,7 +329,7 @@ function startGulp(name, opts) {
     var pjson = require('../../package.json');
     var name = 'v' + pjson.version;
     git.tag(name, 'Release ' + name, function() {
-      git.push('digibyte', name, cb);
+      git.push('but', name, cb);
     });
   });
 
